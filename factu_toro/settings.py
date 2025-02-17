@@ -28,7 +28,7 @@ if ENV_FILE:
 SECRET_KEY = "django-insecure-@3dq_4xq!gw$)+q1e61$)=hx=!aodh(q4*br3n@yeemoa@9-_a"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", True)
+DEBUG = os.getenv("DEBUG", None)
 
 ALLOWED_HOSTS = []
 
@@ -102,11 +102,12 @@ WSGI_APPLICATION = "factu_toro.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("DB_NAME"),
-        "USER": os.environ.get("DB_USER"),
-        "PASSWORD": os.environ.get("DB_PASSWORD"),
-        "HOST": os.environ.get("DB_HOST"),
-        "PORT": os.environ.get("DB_PORT"),
+        # "NAME": os.environ.get("DB_NAME", "factuTORO"),
+        "NAME": os.getenv("DB_NAME", None),  # -> Cambiar a os.getenv es mas sencillo
+        "USER": os.getenv("DB_USER", None),
+        "PASSWORD": os.getenv("DB_PASSWORD", None),
+        "HOST": os.getenv("DB_HOST", None),
+        "PORT": os.getenv("DB_PORT", None),
     }
 }
 
