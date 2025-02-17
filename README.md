@@ -40,15 +40,7 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
 ## Configuración las variables de entorno
 
-4. Renombra el archivo .env.example a .env y edítalo con tus configuraciones locales.
-
-   ```env
-   DEBUG=True
-   SECRET_KEY=tu_secret_key
-   ALLOWED_HOSTS=localhost,127.0.0.1
-   DATABASE_URL=sqlite:///db.sqlite3
-
-   ```
+4. Renombra el archivo `.env.example` a `.env` y edítalo con tus configuraciones locales.
 
 ## Migraciones de Base de Datos
 
