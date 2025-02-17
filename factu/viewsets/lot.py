@@ -13,3 +13,6 @@ class LotViewSet(viewsets.ModelViewSet):
     # @extend_schema(responses={201: LotSerializer()})
     def create(self, request, *args, **kwargs):
         return super().create(request, *args, **kwargs)
+
+    def update(self, request, *args, **kwargs):
+        return super().update(request, *args, **kwargs)

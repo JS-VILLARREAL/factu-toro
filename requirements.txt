@@ -11,6 +11,7 @@ jsonschema-specifications==2024.10.1
 packaging==24.2
 psycopg==3.2.4
 psycopg2==2.9.10
+python-dotenv==1.0.1
 PyYAML==6.0.2
 referencing==0.36.2
 rpds-py==0.22.3
